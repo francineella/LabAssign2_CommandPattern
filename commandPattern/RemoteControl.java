@@ -1,19 +1,38 @@
 package commandPattern;
 
 public class RemoteControl {
-    private Command command;
-    public Command getCommand() {
-        return command;
+    private Command turnOnCommand;
+    private Command turnOffCommand;
+    private Command increaseCommand;
+    private Command decreaseCommand;
+   
+
+    public void setTurnOnCommand(Command turnOnCommand) {
+        this.turnOnCommand = turnOnCommand;
     }
 
-    public void setCommand(Command command) {
-        this.command = command;
+    public void setTurnOffCommand(Command turnOffCommand) {
+        this.turnOnCommand = turnOffCommand;
     }
 
-    public void clickButton(){
-        System.out.println(command.execute());
+    public void setIncreaseCommand(Command increaseCommand) {
+        this.increaseCommand = increaseCommand;
     }
 
+    public void setDecreaseCommand(Command decreaseCommand) {
+        this.decreaseCommand = decreaseCommand;
+    }
 
-
+    public void turnOn(){
+        turnOnCommand.execute();
+    }
+    public void turnOff(){
+        turnOffCommand.execute();
+    }
+    public void increase(){
+        increaseCommand.execute();
+    }
+    public void decrease(){
+        decreaseCommand.execute();
+    }
 }
