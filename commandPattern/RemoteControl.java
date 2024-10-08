@@ -12,7 +12,7 @@ public class RemoteControl {
     }
 
     public void setTurnOffCommand(Command turnOffCommand) {
-        this.turnOnCommand = turnOffCommand;
+        this.turnOffCommand = turnOffCommand;
     }
 
     public void setIncreaseCommand(Command increaseCommand) {
